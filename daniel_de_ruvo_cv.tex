@@ -1,0 +1,115 @@
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}
+\moderncvcolor{blue}
+\nopagenumbers{}
+
+% adjust the page margins
+\usepackage[scale=0.8,top=2cm,bottom=2cm]{geometry}
+\usepackage[none]{hyphenat}
+
+% font loading
+\ifxetexorluatex
+  \usepackage{fontspec}
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Ligatures=TeX}
+  \setmainfont{Latin Modern Roman}
+  \setsansfont{Latin Modern Sans}
+  \setmonofont{Latin Modern Mono}
+  \setmathfont{Latin Modern Math}
+\else
+  \usepackage[T1]{fontenc}
+  \usepackage{lmodern}
+\fi
+
+% document language
+\usepackage[english]{babel}
+
+% personal data
+\name{Daniel}{De Ruvo}
+\title{Senior Backend Software Engineer}
+\phone[mobile]{+44~555555555}
+\email{deruvo@gmail.com}
+\homepage{de-ruvo.com}
+
+% Social icons
+\social[linkedin]{deruvo}
+\social[github]{de-ruvo}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+\vspace*{-12mm}
+\section{Technical Skills}
+\cvdoubleitem{\textbf{Programming}}{Go, Python, Perl, SQL, Bash}{\textbf{OS}}{Debian GNU/Linux and derivatives}
+\cvdoubleitem{\textbf{Databases}}{PostgreSQL, MongoDB, Redis}{\textbf{Secrets}}{Vault, Azure Key Vault}
+\cvdoubleitem{\textbf{Microservices}}{Docker, Kubernetes}{\textbf{CI/CD}}{Jenkins, Github Actions}
+\cvdoubleitem{\textbf{Middleware}}{Kafka, Azure EventHubs, RabbitMQ}{\textbf{Web Servers}}{Apache HTTP Server, NGINX}
+\cvdoubleitem{\textbf{Typesetting}}{\LaTeX}{\textbf{Testing}}{Apache JMeter}
+\section{Experience}
+\cventry{2012--Present}{Senior Backend Software Engineer}{Headforwards}{Cornwall, UK}{}{
+\begin{itemize}
+\item 2017-Present - Contracted to NTT Global Data Centers:
+\begin{itemize}
+\item Engineered and wrote tens of microservices for a Data-Centre management application in Go, utilising a diverse technology stack including Docker, Kubernetes, Postgresql, MongoDB, Kafka, Redis, ETCD, Vault, NginX, Swagger.
+\item Migrated legacy monolithic systems to a microservice architecture, speeding the deployment cycle by up to 90\%, minimised the dependency on manual regression testing and achieved greater modularity and scalability.
+\item Implemented Continuous Integration and Continuous Deployment (CI/CD) pipelines in Jenkins to build and deploy approximately 100 microservices. Achieved up to 25 deployments a day.
+\item Migrated six shared services from a self-hosted platform to Cloud-Based services in Azure, achieving enhanced performance and scalability, and notably reducing operational costs.
+\item Collaborated with tens of technical teams spread across the globe, overseeing six interconnected applications. Communicated requirements, managed cross-team debugging efforts and incident resolutions, and coordinated support for production issues.
+\item Managed the synchronisation of tens of thousands of customers, users, and associated data between six distinct applications deployed across four global regions. Migrated the data source to a different authoritative system.
+\end{itemize}
+\item 2015-2017 \textbf{Backend Software Engineer} - Contracted to NTT:
+\begin{itemize}
+\item Programmed Python microservices as part of a team of eight developers for a cloud services dashboard system, enabling the release of a resource discovery service.
+\end{itemize}
+\item 2014-2015 \textbf{Software Engineer} - Contracted to NTT:
+\begin{itemize}
+\item In collaboration with a team, developed a Single-Sign-On portal in Perl. Integrated the authentication with Microsoft AD FS with OpenID Connect, enabling seamless access for thousands of users.
+\end{itemize}
+\item 2012-2014 \textbf{Full Stack Developer} - Contracted to NTT:
+\begin{itemize}
+\item Implemented compute and networking features for a cloud hosting service product in Perl within a team of thirty developers. Technology stack include PostgreSQL, Apache, RabbitMQ, VMWare Cloud Director and NetBackup.
+\item Onboarded six developers to the team, providing mentorship on utilising the framework and stack.
+\item Designed and developed centralised internationalisation system using Perl and Memcached, ensuring consistent translations across six different applications and platforms.
+\end{itemize}
+\end{itemize}}
+\cventry{2005-2012}{Senior Developer}{Bandes}{Caracas, Venezuela}{}{
+\begin{itemize}
+\item Led a team of twelve developers on the implementation of a tailor-made loan management application using Perl and PostgreSQL.
+\item Played an integral role in the hiring process by conducting technical interviews for prospective team members. Provided mentorship and guidance to eight new hires, facilitating new starter's proficiency in the technology stack.
+\item Recommended the migration of a legacy proprietary application and platform to free/open source technologies, reducing licensing costs by up to 60\%.
+\item Automated a process previously taking four days to just two hours through the design and implementation of a Full-text Search system for Anti Money Laundering regulation compliance.
+\end{itemize}}
+\cventry{2011-2012}{Freelance Developer}{Criptotec}{Caracas, Venezuela}{}{
+\begin{itemize}
+\item Conceived and wrote a two-factor authentication service for Internet Banking in Perl leading a team of four programmers.
+\item Open-sourced the implementation of the TOTP and OCRA algorithms by publishing the \href{https://metacpan.org/pod/Authen::OATH::OCRA}{Authen::OATH::OCRA} module on CPAN, Applied Test-Driven-Development with hundreds of test vectors provided in the algorithm \href{https://www.rfc-editor.org/rfc/rfc6287.html}{RFC}.
+\end{itemize}}
+\cventry{2003-2005}{Systems Analyst}{Cadivi}{Caracas, Venezuela}{}{
+\begin{itemize}
+\item Led the development of an e-government system utilising PHP, C\#, and Oracle for Credit Card Foreign Currency exchange control.
+\item Arranged the integration with tens of financial institutions, enabling seamless support for hundreds of thousands of users and efficient processing of millions of transactions daily.
+\end{itemize}}
+\section{Education}
+\cventry{}{Master in Business Administration (Dissertation Pending)}{IESA}{Caracas, Venezuela}{}{}
+\cventry{}{Bachelor in Computer Science}{UNE}{Caracas, Venezuela}{}{}
+
+\section{Languages}
+\cvitemwithcomment{\textbf{English}}{Full professional proficiency.}{}
+\cvitemwithcomment{\textbf{Italian}}{Professional working proficiency.}{}
+\cvitemwithcomment{\textbf{Spanish}}{Native Proficiency}{}
+
+%\section{Interests}
+%\cvitemwithcomment{\textbf{Vector databases}}{Large Language Models embeddings for database-based Nearest Neighbor search.}{}
+%\cvitemwithcomment{\textbf{Service Mesh}}{Experimenting with side-car pattern service mesh for Kubernetes.}{}
+
+%\section{Hobbies}
+%\cvitemwithcomment{\textbf{Photography}}{}{}
+%\cvitemwithcomment{\textbf{Coffee}}{I'm obsessed with brewing the perfect espresso at home on a budget.}{}
+%\cvitemwithcomment{\textbf{Cooking}}{Passionate about outdoor cooking and barbecuing.}{}
+
+\end{document}
